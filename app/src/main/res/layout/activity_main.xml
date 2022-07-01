@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pink_frame"
+    android:elevation="5dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:ignore="ExtraText">
+
+    <Button
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/themes_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <EditText
+        android:id="@+id/num_txt1"
+        android:layout_width="320dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:hint="0"
+        android:textColorHint="@android:color/black"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:focusable="false"
+        android:cursorVisible="false"
+        android:focusableInTouchMode="false"
+        android:background="@drawable/pink_frame"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/mainGridLayout1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/Cancel"
+            style="@style/btnStyle"
+            android:layout_weight="1"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/del"
+            style="@style/btnStyle"
+            android:layout_weight="1"
+            android:text="⇚" />
+
+        <Button
+            android:id="@+id/mod"
+            style="@style/btnStyle"
+            android:layout_weight="1"
+            android:text="%" />
+
+        <Button
+            android:id="@+id/sum"
+            style="@style/btnStyle"
+            android:layout_weight="1"
+            android:text="+" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainGridLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/num9"
+            style="@style/btnStyle"
+            android:layout_weight="1"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/num8"
+            style="@style/btnStyle"
+            android:layout_weight="1"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/num7"
+            style="@style/btnStyle"
+            android:layout_weight="1"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/sub"
+            style="@style/btnStyle"
+            android:layout_weight="1"
+            android:text="-" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/mainGridLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/num4"
+            style="@style/btnStyle"
+            android:layout_weight="1"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/num5"
+            style="@style/btnStyle"
+            android:layout_weight="1"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/num6"
+            style="@style/btnStyle"
+            android:layout_weight="1"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/mul"
+            style="@style/btnStyle"
+            android:text="*" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainGridLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/mainGridLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/num1"
+            style="@style/btnStyle"
+            android:layout_weight="1"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/num2"
+            style="@style/btnStyle"
+            android:layout_weight="1"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/num3"
+            style="@style/btnStyle"
+            android:layout_weight="1"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/div"
+            style="@style/btnStyle"
+            android:layout_weight="1"
+            android:text="/" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainGridLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/point"
+            style="@style/btnStyle"
+            android:layout_weight=".5"
+            android:text="." />
+
+        <Button
+            android:id="@+id/Zero"
+            style="@style/btnStyle"
+            android:layout_weight=".5"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/equal"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="4"
+            android:background="@drawable/pink_frame"
+            android:elevation="2dp"
+            android:fontFamily="sans-serif"
+            android:text="="
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/blue_btn"
+        style="@style/colorBtn"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/blue_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/pink_theme"
+        style="@style/colorBtn"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/pink_btn"
+        app:layout_constraintEnd_toStartOf="@+id/blue_btn"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.047879618" />
+
+    <Button
+        android:id="@+id/dark_theme"
+        style="@style/colorBtn"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/dark_btn"
+        app:layout_constraintEnd_toStartOf="@+id/pink_theme"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/velvet_theme"
+        style="@style/colorBtn"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/velvet_btn"
+        app:layout_constraintEnd_toStartOf="@+id/green_theme"
+        app:layout_constraintHorizontal_bias="0.985"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/green_theme"
+        style="@style/colorBtn"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/green_btn"
+        app:layout_constraintEnd_toStartOf="@+id/dark_theme"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

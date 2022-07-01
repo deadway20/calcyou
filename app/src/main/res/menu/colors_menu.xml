@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/blue"
+        android:title="blue theme"
+        android:icon="@drawable/blue_btn"/>
+
+    <item android:id="@+id/dark"
+        android:title="dark theme"
+        android:icon="@drawable/dark_btn"/>
+
+    <item android:id="@+id/green"
+        android:title="green theme"
+        android:icon="@drawable/green_btn"/>
+
+    <item android:id="@+id/pink"
+        android:title="pink theme"
+        android:icon="@drawable/pink_btn"/>
+
+    <item android:id="@+id/velvet"
+        android:title="velvet theme"
+        android:icon="@drawable/velvet_btn"/>
+
+</menu>
