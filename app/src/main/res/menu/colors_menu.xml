@@ -2,23 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/blue"
-        android:title="blue theme"
-        android:icon="@drawable/blue_btn"/>
+        android:title="blue"
+        android:icon="@drawable/image2"
+        android:iconTintMode="add"/>
 
     <item android:id="@+id/dark"
-        android:title="dark theme"
-        android:icon="@drawable/dark_btn"/>
+        android:title="dark"/>
 
     <item android:id="@+id/green"
-        android:title="green theme"
-        android:icon="@drawable/green_btn"/>
+        android:title="green"/>
 
     <item android:id="@+id/pink"
-        android:title="pink theme"
-        android:icon="@drawable/pink_btn"/>
+        android:title="pink" />
 
     <item android:id="@+id/velvet"
-        android:title="velvet theme"
-        android:icon="@drawable/velvet_btn"/>
+        android:title="velvet" />
 
 </menu>

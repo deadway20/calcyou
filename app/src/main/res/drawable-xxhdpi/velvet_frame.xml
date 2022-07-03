@@ -10,13 +10,13 @@
         <shape  android:shape="rectangle">
 
             <solid
-                android:color="#ecf0f3"/>
+                android:color="@color/bg_color"/>
 
             <corners
                 android:radius="30dp"/>
 
             <stroke
-                android:color="#902c3E"
+                android:color="@color/velvet"
                 android:width="2dp"/>
 
             <size

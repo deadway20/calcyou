@@ -2,21 +2,21 @@
 <selector xmlns:android = "http://schemas.android.com/apk/res/android">
     <item android:state_pressed = "false">
         <shape android:shape = "oval">
-            <solid android:color = "#FFFFFF"/>
+            <solid android:color = "@color/white"/>
             <size  android:width="30dp"
                 android:height="30dp"/>
             <stroke
-                android:color="#FFD0FE"
+                android:color="@color/pink"
                 android:width="2dp"/>
         </shape>
     </item>
     <item android:state_pressed = "true">
         <shape android:shape = "oval">
-            <solid android:color = "#FFE8E3E3"/>
+            <solid android:color = "@color/bg_color"/>
             <size  android:width="30dp"
                 android:height="30dp"/>
             <stroke
-                android:color="#FFD0FE"
+                android:color="@color/pink"
                 android:width="2dp"/>
         </shape>
     </item>

@@ -6,18 +6,15 @@
             <size  android:width="30dp"
                 android:height="30dp"/>
             <stroke
-                android:color="#535AE5"
+                android:color="@color/blue"
                 android:width="2dp"/>
         </shape>
     </item>
     <item android:state_pressed = "true">
         <shape android:shape = "oval">
-            <solid android:color = "#FFE8E3E3"/>
+            <solid android:color = "@color/bg_color"/>
             <size  android:width="30dp"
                 android:height="30dp"/>
-            <stroke
-                android:color="#535AE5"
-                android:width="2dp"/>
         </shape>
     </item>
 </selector>

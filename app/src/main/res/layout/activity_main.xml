@@ -1,40 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/pink_frame"
     android:elevation="5dp"
     android:gravity="center"
-    android:orientation="vertical"
-    tools:ignore="ExtraText">
+    android:orientation="vertical">
 
     <Button
+        android:id="@+id/colorbtn"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:background="@drawable/themes_btn"
+        app:layout_constraintBottom_toTopOf="@+id/num_txt1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.789"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintTop_toTopOf="@+id/guideline1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/test"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/pink_btn"
+        app:layout_constraintBottom_toTopOf="@+id/num_txt1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.335"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline1"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/num_txt1"
         android:layout_width="320dp"
         android:layout_height="70dp"
+        android:background="@drawable/pink_frame"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:gravity="center"
         android:hint="0"
+        android:importantForAutofill="no"
+        android:inputType="number|numberDecimal"
+        android:textColor="#000000"
         android:textColorHint="@android:color/black"
         android:textStyle="bold"
-        android:textColor="#000000"
-        android:focusable="false"
-        android:cursorVisible="false"
-        android:focusableInTouchMode="false"
-        android:background="@drawable/pink_frame"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_R"
+        app:layout_constraintStart_toEndOf="@+id/guideline_L"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.798" />
 
@@ -45,8 +61,8 @@
         android:layout_marginBottom="6dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/mainGridLayout1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toEndOf="@id/guideline_L"
+        app:layout_constraintEnd_toStartOf="@id/guideline_R">
 
         <Button
             android:id="@+id/Cancel"
@@ -81,8 +97,8 @@
         android:layout_marginBottom="6dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toEndOf="@id/guideline_L"
+        app:layout_constraintEnd_toStartOf="@id/guideline_R">
 
         <Button
             android:id="@+id/num9"
@@ -117,9 +133,8 @@
         android:layout_marginBottom="6dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/mainGridLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toEndOf="@id/guideline_L"
+        app:layout_constraintEnd_toStartOf="@id/guideline_R">
 
         <Button
             android:id="@+id/num4"
@@ -142,7 +157,7 @@
         <Button
             android:id="@+id/mul"
             style="@style/btnStyle"
-            android:text="*" />
+            android:text="x" />
 
     </LinearLayout>
 
@@ -153,8 +168,8 @@
         android:layout_marginBottom="6dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/mainGridLayout3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toEndOf="@id/guideline_L"
+        app:layout_constraintEnd_toStartOf="@id/guideline_R">
 
         <Button
             android:id="@+id/num1"
@@ -188,8 +203,8 @@
         android:layout_height="80dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toEndOf="@id/guideline_L"
+        app:layout_constraintEnd_toStartOf="@id/guideline_R">
 
         <Button
             android:id="@+id/point"
@@ -219,54 +234,26 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/blue_btn"
-        style="@style/colorBtn"
-        android:layout_marginEnd="35dp"
-        android:background="@drawable/blue_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
-
-    <Button
-        android:id="@+id/pink_theme"
-        style="@style/colorBtn"
-        android:layout_marginEnd="35dp"
-        android:background="@drawable/pink_btn"
-        app:layout_constraintEnd_toStartOf="@+id/blue_btn"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
-
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.047879618" />
 
-    <Button
-        android:id="@+id/dark_theme"
-        style="@style/colorBtn"
-        android:layout_marginEnd="35dp"
-        android:background="@drawable/dark_btn"
-        app:layout_constraintEnd_toStartOf="@+id/pink_theme"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_R"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
 
-    <Button
-        android:id="@+id/velvet_theme"
-        style="@style/colorBtn"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/velvet_btn"
-        app:layout_constraintEnd_toStartOf="@+id/green_theme"
-        app:layout_constraintHorizontal_bias="0.985"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
-
-    <Button
-        android:id="@+id/green_theme"
-        style="@style/colorBtn"
-        android:layout_marginEnd="35dp"
-        android:background="@drawable/green_btn"
-        app:layout_constraintEnd_toStartOf="@+id/dark_theme"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_L"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -2,15 +2,12 @@
 <selector xmlns:android = "http://schemas.android.com/apk/res/android">
     <item android:state_pressed = "false">
         <shape android:shape = "oval">
-            <solid android:color = "#FFD0FE"/>
-            <stroke
-                android:color="#780909"
-                android:width="2dp"/>
+            <solid android:color = "@color/pink"/>
         </shape>
     </item>
     <item android:state_pressed = "true">
         <shape android:shape = "oval">
-            <solid android:color = "#FFFFFF"/>
+            <solid android:color = "@color/bg_color"/>
             <size  android:width="30dp"
                 android:height="30dp"/>
         </shape>

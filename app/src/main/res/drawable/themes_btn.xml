@@ -5,13 +5,11 @@
             <gradient android:startColor="#E91E63"
                 android:centerColor="#009688"
                 android:endColor="#FF5722" />
-            <stroke android:width="2dp" android:color="@color/Black" />
         </shape>
     </item>
     <item android:state_pressed = "true">
         <shape android:shape="oval">
             <solid android:color="@color/white" />
-            <stroke android:width="2dp" android:color="@color/Black" />
         </shape>
     </item>
 </selector>

@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:left="2dp"
-        android:right="2dp"
-        android:bottom="2dp"
-        android:top="2dp">
-
-        <!-- Insert your shape here: -->
-        <shape  android:shape="rectangle">
+        <shape  android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
 
             <solid
-                android:color="#393939"/>
+                android:color="@android:color/transparent"/>
 
             <corners
-                android:radius="30dp"/>
+                android:radius="30dp"
+                />
 
             <stroke
-                android:color="#FF5722"
-                android:width="2dp"/>
+                android:color="@color/orange"
+                android:width="2dp"
+                android:dashGap="5dp"/>
 
             <size
                 android:width="250dp"
@@ -29,6 +23,3 @@
                 android:top="5dp" />
 
         </shape>
-
-    </item>
-</layer-list>

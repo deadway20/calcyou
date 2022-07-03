@@ -9,13 +9,13 @@
         <!-- Insert your shape here: -->
         <shape android:shape="rectangle">
 
-            <solid android:color="#ecf0f3" />
+            <solid android:color="@color/bg_color" />
 
             <corners android:radius="30dp" />
 
             <stroke
                 android:width="3dp"
-                android:color="#FFD0FE" />
+                android:color="@color/pink" />
 
             <size
                 android:width="250dp"
