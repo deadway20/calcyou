@@ -2,35 +2,44 @@ package com.coderx.calcyou;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.PopupMenu;
-import android.widget.PopupWindow;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     ConstraintLayout constraintLayout;
+    LinearLayout themes_Menu , history_layout ;
+    ListView history_list ;
     boolean sumation, subtract, divtion, multiply, modules;
     double number1, number2;
-    private Button sum, sub, mul, div, equal, cancel, point, del, mod, color_btn,test ;
+    private  Button pink ,green , dark ,blue , velvet ;
+    private Button sum, sub, mul, div, equal, cancel, point, del, mod, themes_btn, history , clear_history ;
     private Button num1, num2, num3, num4, num5, num6, num7, num8, num9, zero;
     private EditText txt;
+    int i = 0 ,y = 0 ;
+
+    ArrayList <String> his_list ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         constraintLayout = findViewById(R.id.main_layout);
-        color_btn = findViewById(R.id.colorbtn);
+        themes_Menu = findViewById(R.id.vertical_dropdown_icon_menu_items);
+        history_layout = findViewById(R.id.history_layout);
+        history_list = findViewById(R.id.history_list) ;
+        themes_btn = findViewById(R.id.themes_btn);
         mul = findViewById(R.id.mul);
         sub = findViewById(R.id.sub);
         cancel = findViewById(R.id.Cancel);
@@ -51,88 +60,143 @@ public class MainActivity extends AppCompatActivity {
         num1 = findViewById(R.id.num1);
         del = findViewById(R.id.del);
         mod = findViewById(R.id.mod);
-        test = findViewById(R.id.test) ;
+        history = findViewById(R.id.hisrory_btn) ;
+        clear_history = findViewById(R.id.clear_history);
+
+        // set themes button
+        pink = findViewById(R.id.pink_btn);
+        green = findViewById(R.id.green_btn);
+        dark = findViewById(R.id.dark_btn);
+        blue = findViewById(R.id.blue_btn);
+        velvet = findViewById(R.id.velvet_btn);
+
         // make Array list for set themes to all Buttons
         List<Button> btns_list = new ArrayList<>(Arrays.asList(sum, sub, div, mul, cancel, del, mod, zero, point, num1, num2, num3, num4, num5, num6, num7, num8, num9));
         ArrayList<Button> list = new ArrayList<Button>(btns_list);
 
-        // themes Button Methods
-        color_btn.setOnClickListener(new OnClickListener() {
+        // make Array Adaptor for ListView
+        his_list = new ArrayList<>();
+        his_list.add("saterday");
+        his_list.add("sunday");
+        his_list.add("monday");
+        his_list.add("tusday");
+        his_list.add("wednesday");
+        his_list.add("thursday");
+        his_list.add("friday");
+
+        ArrayAdapter <String> history_adapter = new ArrayAdapter<String>(MainActivity.this , R.layout.history_layout , his_list) ;
+        history_list.setAdapter(history_adapter);
+
+        clear_history.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Creating the instance of PopupMenu
-                PopupMenu popup = new PopupMenu(MainActivity.this, color_btn);
-                //Inflating the Popup using xml file
-                popup.getMenuInflater().inflate(R.menu.colors_menu, popup.getMenu());
-                //registering popup with OnMenuItemClickListener
-                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem menuItem) {
-                        switch (menuItem.getItemId()) {
-                            case R.id.blue:
-                                txt.setBackgroundResource(R.drawable.blue_frame);
-                                txt.setTextColor(txt.getContext().getColor(R.color.black));
-                                txt.setHintTextColor(txt.getContext().getColor(R.color.black));
-                                equal.setBackgroundResource(R.drawable.blue_frame);
-                                equal.setTextColor(equal.getContext().getColor(R.color.black));
-                                constraintLayout.setBackgroundResource(R.drawable.blue_frame);
-                                for (Button btns : list){btns.setTextColor(btns.getContext().getColor(R.color.black));}
-                                for (Button btns : list){btns.setBackgroundResource(R.drawable.blue_theme);}
-                                return true;
-                            case (R.id.dark):
-                                txt.setBackgroundResource(R.drawable.dark_frame2);
-                                txt.setTextColor(equal.getContext().getColor(R.color.white));
-                                txt.setHintTextColor(txt.getContext().getColor(R.color.white));
-                                equal.setBackgroundResource(R.drawable.dark_frame2);
-                                equal.setTextColor(equal.getContext().getColor(R.color.white));
-                                constraintLayout.setBackgroundResource(R.drawable.dark_frame);
-                                for (Button btns : list){btns.setTextColor(equal.getContext().getColor(R.color.white));}
-                                for (Button btns : list){btns.setBackgroundResource(R.drawable.dark_theme);}
-                                return true;
-                            case (R.id.green):
-                                txt.setBackgroundResource(R.drawable.green_frame);
-                                txt.setTextColor(txt.getContext().getColor(R.color.black));
-                                txt.setHintTextColor(txt.getContext().getColor(R.color.black));
-                                equal.setBackgroundResource(R.drawable.green_frame);
-                                equal.setTextColor(equal.getContext().getColor(R.color.black));
-                                constraintLayout.setBackgroundResource(R.drawable.green_frame);
-                                for (Button btns : list){btns.setTextColor(btns.getContext().getColor(R.color.black));}
-                                for (Button btns : list){btns.setBackgroundResource(R.drawable.green_theme);}
-                                return true;
-                            case (R.id.pink):
-                                txt.setBackgroundResource(R.drawable.pink_frame);
-                                txt.setTextColor(txt.getContext().getColor(R.color.black));
-                                txt.setHintTextColor(txt.getContext().getColor(R.color.black));
-                                equal.setBackgroundResource(R.drawable.pink_frame);
-                                equal.setTextColor(equal.getContext().getColor(R.color.black));
-                                constraintLayout.setBackgroundResource(R.drawable.pink_frame);
-                                for (Button btns : list){ btns.setTextColor(btns.getContext().getColor(R.color.black));}
-                                for (Button btns : list){btns.setBackgroundResource(R.drawable.pink_theme);}
-                                return true;
-                            case (R.id.velvet):
-                                txt.setBackgroundResource(R.drawable.velvet_frame);
-                                txt.setTextColor(txt.getContext().getColor(R.color.black));
-                                txt.setHintTextColor(txt.getContext().getColor(R.color.black));
-                                equal.setBackgroundResource(R.drawable.velvet_frame);
-                                equal.setTextColor(equal.getContext().getColor(R.color.black));
-                                constraintLayout.setBackgroundResource(R.drawable.velvet_frame);
-                                for (Button btns : list){btns.setTextColor(btns.getContext().getColor(R.color.black));}
-                                for (Button btns : list) {btns.setBackgroundResource(R.drawable.velvet_theme);}
-                                return true;
-                            default:
-                                return false;
-                        }
-                    }
-                });
-                popup.show();
+               history_adapter.clear();
+                history_layout.setVisibility(View.GONE);
+
+
             }
         });
 
-        test.setOnClickListener(new OnClickListener() {
+        // themes Button Methods
+        pink.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txt.setBackgroundResource(R.drawable.pink_frame);
+                txt.setTextColor(txt.getContext().getColor(R.color.black));
+                txt.setHintTextColor(txt.getContext().getColor(R.color.black));
+                equal.setBackgroundResource(R.drawable.pink_frame);
+                equal.setTextColor(equal.getContext().getColor(R.color.black));
+                constraintLayout.setBackgroundResource(R.drawable.pink_frame);
+                for (Button btns : list){ btns.setTextColor(btns.getContext().getColor(R.color.black));}
+                for (Button btns : list){btns.setBackgroundResource(R.drawable.pink_theme);}
+                themes_Menu.setVisibility(View.GONE);
+
+            }
+        });
+        green.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txt.setBackgroundResource(R.drawable.green_frame);
+                txt.setTextColor(txt.getContext().getColor(R.color.black));
+                txt.setHintTextColor(txt.getContext().getColor(R.color.black));
+                equal.setBackgroundResource(R.drawable.green_frame);
+                equal.setTextColor(equal.getContext().getColor(R.color.black));
+                constraintLayout.setBackgroundResource(R.drawable.green_frame);
+                for (Button btns : list){btns.setTextColor(btns.getContext().getColor(R.color.black));}
+                for (Button btns : list){btns.setBackgroundResource(R.drawable.green_theme);}
+                themes_Menu.setVisibility(View.GONE);
+            }
+        });
+        dark.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txt.setBackgroundResource(R.drawable.dark_frame2);
+                txt.setTextColor(equal.getContext().getColor(R.color.white));
+                txt.setHintTextColor(txt.getContext().getColor(R.color.white));
+                equal.setBackgroundResource(R.drawable.dark_frame2);
+                equal.setTextColor(equal.getContext().getColor(R.color.white));
+                constraintLayout.setBackgroundResource(R.drawable.dark_frame);
+                for (Button btns : list){btns.setTextColor(equal.getContext().getColor(R.color.white));}
+                for (Button btns : list){btns.setBackgroundResource(R.drawable.dark_theme);}
+                themes_Menu.setVisibility(View.GONE);
+            }
+        });
+        blue.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txt.setBackgroundResource(R.drawable.blue_frame);
+                txt.setTextColor(txt.getContext().getColor(R.color.black));
+                txt.setHintTextColor(txt.getContext().getColor(R.color.black));
+                equal.setBackgroundResource(R.drawable.blue_frame);
+                equal.setTextColor(equal.getContext().getColor(R.color.black));
+                constraintLayout.setBackgroundResource(R.drawable.blue_frame);
+                for (Button btns : list){btns.setTextColor(btns.getContext().getColor(R.color.black));}
+                for (Button btns : list){btns.setBackgroundResource(R.drawable.blue_theme);}
+                themes_Menu.setVisibility(View.GONE);
+            }
+        });
+        velvet.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txt.setBackgroundResource(R.drawable.velvet_frame);
+                txt.setTextColor(txt.getContext().getColor(R.color.black));
+                txt.setHintTextColor(txt.getContext().getColor(R.color.black));
+                equal.setBackgroundResource(R.drawable.velvet_frame);
+                equal.setTextColor(equal.getContext().getColor(R.color.black));
+                constraintLayout.setBackgroundResource(R.drawable.velvet_frame);
+                for (Button btns : list){btns.setTextColor(btns.getContext().getColor(R.color.black));}
+                for (Button btns : list) {btns.setBackgroundResource(R.drawable.velvet_theme);}
+                themes_Menu.setVisibility(View.GONE);
+            }
+        });
+
+        themes_btn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                i++ ;
+                if (i == 1){
+                    themes_Menu.setVisibility(View.VISIBLE);
+                } else if (i == 2) {
+                    themes_Menu.setVisibility(View.GONE);
+                    i = 0 ;
+                }
+            }
+
+        });
+
+        history.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                PopupWindow popwin = new PopupWindow(MainActivity.this) ;
+                y++ ;
+                if (y == 1){
+                    history_layout.setVisibility(View.VISIBLE);
+                } else if (y == 2) {
+                    history_layout.setVisibility(View.GONE);
+                    y = 0 ;
+                }
+
+
             }
         });
         num1.setOnClickListener(new OnClickListener() {
@@ -205,7 +269,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 try {
                     number1 = Double.parseDouble(txt.getText().toString());
-                    txt.setText("");
                     sumation = true;
                 } catch (NumberFormatException e) {
                 }
@@ -250,7 +313,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     number1 = Double.parseDouble(txt.getText().toString());
-                    txt.setText("");
                     modules = true;
                 } catch (Exception e) {
                 }
@@ -306,6 +368,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
 
     }
 }
