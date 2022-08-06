@@ -25,45 +25,76 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:background="@drawable/ic_history"
-        app:layout_constraintBottom_toTopOf="@+id/num_txt1"
+        app:layout_constraintBottom_toTopOf="@id/calc_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.335"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline1"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/num_txt1"
-        android:layout_width="320dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="32dp"
+    <LinearLayout
+        android:id="@+id/calc_layout"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:background="@drawable/blue_frame"
-        android:cursorVisible="false"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:gravity="center"
-        android:hint="0"
-        android:importantForAutofill="no"
-        android:inputType="number|numberDecimal"
-        android:textColor="#000000"
-        android:textColorHint="@android:color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_R"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toEndOf="@+id/guideline_L"
-        app:layout_constraintTop_toBottomOf="@+id/guideline1"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintBottom_toTopOf="@+id/num_layout1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline1"
+        app:layout_constraintVertical_bias="0.712">
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:cursorVisible="true"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:gravity="end|center_vertical"
+            android:hint="0"
+            android:importantForAutofill="no"
+            android:inputType="number|numberDecimal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="#000000"
+            android:textColorHint="@android:color/black"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="0"
+            android:background="@null"
+            android:textSize="25sp"
+            android:inputType="number|numberDecimal"
+            android:textColor="#000000"
+            android:textColorHint="@android:color/black"
+            android:textStyle="bold"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:importantForAutofill="no"/>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/vertical_dropdown_icon_menu_items"
         android:layout_width="50dp"
         android:layout_height="212dp"
         android:layout_marginTop="4dp"
-        android:background="@drawable/dark_frame2"
+        android:background="@drawable/blue_frame"
         android:orientation="vertical"
         android:padding="5dp"
-        android:visibility="invisible"
+        android:visibility="gone"
         android:gravity="center_horizontal"
         app:layout_constraintEnd_toStartOf="@+id/guideline_R"
         app:layout_constraintHorizontal_bias="0.853"
@@ -93,21 +124,21 @@
         <Button
             android:id="@+id/velvet_btn"
             style="@style/theme_btn"
-            android:background="@drawable/velvet_btn" />
+            android:background="@drawable/red_btn" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/history_layout"
         android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_height="230dp"
         android:layout_marginTop="4dp"
         android:orientation="vertical"
         android:padding="10dp"
-        android:background="@drawable/dark_frame2"
+        android:background="@drawable/blue_frame"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toStartOf="@+id/guideline_R"
-        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintHorizontal_bias="0.150"
         app:layout_constraintStart_toEndOf="@+id/guideline_L"
         app:layout_constraintTop_toBottomOf="@+id/hisrory_btn"
         app:layout_constraintVertical_bias="0.0"
@@ -117,7 +148,7 @@
             android:id="@+id/history_list"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="5"/>
+            android:layout_weight="8" />
         <Button
             android:id="@+id/clear_history"
             android:layout_width="match_parent"
@@ -146,24 +177,28 @@
             style="@style/btnStyle"
             android:layout_weight="1"
             android:text="C" />
+        <Button
+            android:id="@+id/l_bracket"
+            style="@style/btnStyle"
+            android:layout_weight="1"
+            android:text="()" />
+
 
         <Button
             android:id="@+id/del"
             style="@style/btnStyle"
             android:layout_weight="1"
-            android:text="⇚" />
+            android:text="\u232b" />
 
-        <Button
-            android:id="@+id/mod"
-            style="@style/btnStyle"
-            android:layout_weight="1"
-            android:text="%" />
+
 
         <Button
             android:id="@+id/sum"
             style="@style/btnStyle"
             android:layout_weight="1"
-            android:text="+" />
+            android:background="@drawable/blue_theme2"
+            android:text="+"
+            android:textSize="35sp"/>
 
     </LinearLayout>
 
@@ -201,7 +236,9 @@
             android:id="@+id/sub"
             style="@style/btnStyle"
             android:layout_weight="1"
-            android:text="-" />
+            android:background="@drawable/blue_theme2"
+            android:text="-"
+            android:textSize="35sp"/>
 
     </LinearLayout>
 
@@ -238,8 +275,10 @@
         <Button
             android:id="@+id/mul"
             style="@style/btnStyle"
-            android:text="x"
-            android:layout_weight="1"/>
+            android:text="×"
+            android:background="@drawable/blue_theme2"
+            android:layout_weight="1"
+            android:textSize="35sp"/>
 
     </LinearLayout>
 
@@ -277,7 +316,9 @@
             android:id="@+id/div"
             style="@style/btnStyle"
             android:layout_weight="1"
-            android:text="/" />
+            android:background="@drawable/blue_theme2"
+            android:text="÷"
+            android:textSize="35sp"/>
 
     </LinearLayout>
 
@@ -297,7 +338,7 @@
             style="@style/btnStyle"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="." />
+            android:text="·" />
 
         <Button
             android:id="@+id/Zero"
@@ -305,14 +346,19 @@
             style="@style/btnStyle"
             android:layout_weight="1"
             android:text="0" />
+        <Button
+            android:id="@+id/mod"
+            android:layout_width="0dp"
+            style="@style/btnStyle"
+            android:layout_weight="1"
+            android:text="%" />
 
         <Button
             android:id="@+id/equal"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginEnd="5dp"
-            android:layout_weight="2"
-            android:background="@drawable/blue_frame"
+            android:layout_weight="1.3"
+            android:background="@drawable/blue_equal_frame"
             android:elevation="2dp"
             android:fontFamily="sans-serif"
             android:text="="
@@ -341,14 +387,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.98" />
+        app:layout_constraintGuide_percent="0.97" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_L"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.02" />
+        app:layout_constraintGuide_percent="0.03" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

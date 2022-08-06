@@ -4,6 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcu/app/src/main/res/layout/activity_main.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable-hdpi/blue_equal_frame.xml" value="0.166" />
+        <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable-hdpi/blue_theme2.xml" value="0.166" />
+        <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable-hdpi/dark_theme2.xml" value="0.166" />
+        <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable-hdpi/green_theme2.xml" value="0.166" />
+        <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable-hdpi/velvet_theme2.xml" value="0.166" />
+        <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable-mdpi/dark_history_frame.xml" value="0.1585" />
+        <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable-mdpi/pink_theme2.xml" value="0.166" />
+        <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable-xhdpi/dark_equal_frame.xml" value="0.166" />
+        <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable-xhdpi/green_equal_frame.xml" value="0.166" />
+        <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable-xhdpi/pink.xml" value="0.166" />
+        <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable-xhdpi/pink_equal_frame.xml" value="0.166" />
+        <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable-xhdpi/velvet_equal_frame.xml" value="0.166" />
         <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable-xxhdpi/blue_frame.xml" value="0.173" />
         <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable-xxhdpi/dark_frame.xml" value="0.173" />
         <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable-xxhdpi/dark_frame2.xml" value="0.173" />
@@ -35,10 +47,13 @@
         <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable/velvet_btn.xml" value="0.173" />
         <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable/velvet_btns.xml" value="0.173" />
         <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/drawable/velvet_theme.xml" value="0.2235" />
-        <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/layout/activity_main.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/layout/Dark_history_layout.xml" value="0.2328125" />
+        <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/layout/activity_main.xml" value="0.2328125" />
+        <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/layout/dark_history_layout.xml" value="0.2328125" />
         <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/layout/history_layout.xml" value="0.2328125" />
         <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/layout/main.xml" value="0.25" />
         <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/layout/vertical_dropdown_menu.xml" value="0.25" />
+        <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/layout/white_history_layout.xml" value="0.2328125" />
         <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/menu/colors_menu.xml" value="0.33" />
         <entry key="..\:/Users/Coder-x/AndroidStudioProjects/calcyou/app/src/main/res/xml/color_menu.xml" value="0.21770833333333334" />
       </map>

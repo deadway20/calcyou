@@ -17,15 +17,29 @@
 
     <color name="orange">#FF5722</color>
 
-    <color name="blue">#535AE5</color>
+    <color name="blue">#00B0FF</color>
 
     <color name="dark">#424242</color>
 
     <color name="pink">#FFD0FE</color>
 
-    <color name="velvet">#D12123</color>
+    <color name="red">#D12123</color>
 
     <color name="green">#23DA0D</color>
 
     <color name="bg_color">#ecf0f3</color>
+
+    <color name="lite_green">#3323DA0D</color>
+
+    <color name="lite">#4003DAC6</color>
+
+    <color name="lite_blue">#4003DAC6</color>
+
+    <color name="lite_pink">#40FFD0FE</color>
+
+    <color name="lite_red">#33D12123</color>
+
+    <color name="lite_orange">#80FF5722</color>
+
+    <color name="light_grey">#424242</color>
 </resources>

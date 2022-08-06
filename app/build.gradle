@@ -3,6 +3,14 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\Coder-x\\Documents\\Coder_x.jks')
+            storePassword 'Yousef511?'
+            keyAlias 'Key1'
+            keyPassword 'Yousef511?'
+        }
+    }
     compileSdk 32
 
     defaultConfig {
@@ -35,4 +43,5 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'org.mariuszgromada.math:MathParser.org-mXparser:5.0.6'
 }
